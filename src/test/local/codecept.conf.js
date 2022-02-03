@@ -1,4 +1,8 @@
 const browserstack = require("browserstack-local");
+require('dotenv').config()
+
+const BROWSERSTACK_USERNAME = process.env.BROWSERSTACK_USERNAME
+const BROWSERSTACK_ACCESSKEY = process.env.BROWSERSTACK_ACCESSKEY
 
 exports.config = {
     tests: './*_test.js',
@@ -6,8 +10,8 @@ exports.config = {
     helpers: {
         WebDriver: {
             url: 'https://bstackdemo.com',
-            user: 'BROWSERSTACK_USERNAME',
-            key: 'BROWSERSTACK_ACCESSKEY',
+            user: BROWSERSTACK_USERNAME,
+            key: BROWSERSTACK_ACCESSKEY,
             browser: 'chrome',
             capabilities: {
                 "os": "Windows",
@@ -24,7 +28,7 @@ exports.config = {
     bootstrap: function () {
         console.log("Connecting Local");
         exports.bs_local = new browserstack.Local();
-        exports.bs_local.start({ 'key': "BROWSERSTACK_ACCESSKEY" }, function (error) {
+        exports.bs_local.start({ 'key': BROWSERSTACK_ACCESSKEY }, function (error) {
             if (error) return error;
             console.log('Connected. Now testing...');
 

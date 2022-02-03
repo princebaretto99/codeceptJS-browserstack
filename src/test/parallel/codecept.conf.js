@@ -1,11 +1,16 @@
+require('dotenv').config()
+
+const BROWSERSTACK_USERNAME = process.env.BROWSERSTACK_USERNAME
+const BROWSERSTACK_ACCESSKEY = process.env.BROWSERSTACK_ACCESSKEY
+
 exports.config = {
     tests: './*_test.js',
     output: './output',
     helpers: {
         WebDriver: {
             url: 'https://bstackdemo.com',
-            user: 'BROWSERSTACK_USERNAME',
-            key: 'BROWSERSTACK_ACCESSKEY',
+            user: BROWSERSTACK_USERNAME,
+            key: BROWSERSTACK_ACCESSKEY,
             browser: 'chrome',
             desiredCapabilities: {}
         }
