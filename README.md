@@ -1,5 +1,6 @@
 # CodeceptJS-Browserstack
-[CodeceptJS](https://codecept.io/) <img src="https://codecept.io/logo.svg" alt="Codecept.js" height="50" /> Integration with BrowserStack <img src="https://www.browserstack.com/blog/favicon.png" alt="BrowserStack" height="50" />
+
+# Integrating CodeceptJS <a href="https://codecept.io/"><img src="https://codecept.io/logo.svg" alt="Node.js" height="22" /></a> with BrowserStack <a href="https://browserstack.com"><img src="https://www.browserstack.com/blog/favicon.png" alt="BrowserStack" height="22" /></a>
 
 ## Setup
 * Clone the repo
