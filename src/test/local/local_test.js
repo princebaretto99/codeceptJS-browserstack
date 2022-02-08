@@ -1,4 +1,4 @@
-Feature('Add to Cart');
+Feature('Check Local Connection');
 
 Scenario('Local Test', async ({ I }) => {
     I.amOnPage("http://bs-local.com:45691/check")
